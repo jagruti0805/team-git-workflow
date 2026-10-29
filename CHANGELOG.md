@@ -1,0 +1,4 @@
+- Merge branch 'feature/farewell'
+- feat: add farewell
+- docs: test main protection
+- chore: add project foundations
