@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -eu
+
+if git diff --cached --name-only |
+   grep -qx 'app.txt'; then
+    if git show :app.txt |
+       grep -Eiq 'password[[:space:]]*='; then
+        echo "ERROR: Password detected. Commit blocked."
+        exit 1
+    fi
+fi
